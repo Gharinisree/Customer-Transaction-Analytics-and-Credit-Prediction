@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enterprise Revenue & Credit Risk Analytics</title>
+    <script src="{{ url_for('static', filename='chart.min.js') }}"></script>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #0f172a; color: #f8fafc; padding: 20px; }
+        
+        .header { border-bottom: 1px solid #334155; padding-bottom: 14px; margin-bottom: 20px; }
+        .header h2 { color: #38bdf8; font-size: 22px; }
+
+        /* TOP SUMMARY KPIS */
+        .kpi-row { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; margin-bottom: 20px; }
+        .kpi-card { background: #1e293b; border: 1px solid #334155; border-radius: 10px; padding: 14px; text-align: center; }
+        .kpi-title { font-size: 11px; color: #94a3b8; text-transform: uppercase; margin-bottom: 6px; }
+        .kpi-value { font-size: 18px; font-weight: 700; color: #f8fafc; }
+
+        /* 3-COLUMN MAIN LAYOUT */
+        .three-column-grid { display: grid; grid-template-columns: 300px 1fr 340px; gap: 16px; }
+        .card { background-color: #1e293b; border: 1px solid #334155; border-radius: 10px; padding: 16px; margin-bottom: 16px; }
+        .card h3 { font-size: 14px; color: #38bdf8; border-bottom: 1px solid #334155; padding-bottom: 8px; margin-bottom: 12px; }
+
+        .form-group { margin-bottom: 10px; }
+        label { display: block; margin-bottom: 4px; font-size: 11px; color: #94a3b8; }
+        input, select { width: 100%; padding: 8px; background: #0f172a; border: 1px solid #334155; border-radius: 6px; color: #fff; font-size: 12px; }
+        
+        .btn-primary { width: 100%; padding: 10px; background-color: #0284c7; color: white; border: none; border-radius: 6px; font-weight: 600; cursor: pointer; font-size: 12px; margin-top: 6px; }
+        .btn-primary:hover { background-color: #0369a1; }
+
+        /* CHARTS CONTAINER */
+        .chart-box { background: #0f172a; border: 1px solid #334155; border-radius: 8px; padding: 10px; height: 180px; position: relative; margin-bottom: 12px; }
+
+        /* BADGES AND TABLES */
+        .status-badge { padding: 8px 12px; border-radius: 6px; font-weight: 700; display: block; text-align: center; margin-bottom: 12px; font-size: 13px; }
+        .approved { background-color: #059669; color: #ecfdf5; }
+        .rejected { background-color: #dc2626; color: #fef2f2; }
+
+        .badge { padding: 3px 8px; border-radius: 10px; font-size: 10px; font-weight: 600; text-transform: uppercase; }
+        .bg-paid { background: #065f46; color: #34d399; }
+        .bg-partial { background: #854d0e; color: #fde047; }
+        .bg-unpaid { background: #991b1b; color: #fca5a5; }
+
+        table { width: 100%; border-collapse: collapse; margin-top: 8px; }
+        th, td { padding: 6px 8px; text-align: left; border-bottom: 1px solid #334155; font-size: 11px; }
+        th { color: #94a3b8; background: #0f172a; }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h2>Customer Transactions & Risk Prediction Dashboard</h2>
+    </div>
+
+    <!-- OVERALL SHOP KPIS -->
+    <div class="kpi-row">
+        <div class="kpi-card">
+            <div class="kpi-title">Total Shop Billed</div>
+            <div class="kpi-value" id="kpiBilled">₹0</div>
+        </div>
+        <div class="kpi-card">
+            <div class="kpi-title">Total Shop Collected</div>
+            <div class="kpi-value" style="color: #4ade80;" id="kpiPaid">₹0</div>
+        </div>
+        <div class="kpi-card">
+            <div class="kpi-title">Total Outstanding</div>
+            <div class="kpi-value" style="color: #f87171;" id="kpiOutstanding">₹0</div>
+        </div>
+        <div class="kpi-card">
+            <div class="kpi-title">Collection Rate</div>
+            <div class="kpi-value" style="color: #38bdf8;" id="kpiRecovery">0%</div>
+        </div>
+        <div class="kpi-card">
+            <div class="kpi-title">Total Records</div>
+            <div class="kpi-value" id="kpiOrders">0</div>
+        </div>
+    </div>
+
+    <!-- 3-COLUMN LAYOUT -->
+    <div class="three-column-grid">
+        
+        <!-- COLUMN 1: NEW TRANSACTION FORM -->
+        <div class="card">
+            <h3>CREATE TRANSACTION</h3>
+            <form id="createTxForm">
+                <div class="form-group">
+                    <label>Customer ID</label>
+                    <input type="text" id="cust_id_input" placeholder="e.g. cust 105" required>
+                </div>
+                <div class="form-group">
+                    <label>Period / Month</label>
+                    <input type="text" id="period_input" placeholder="e.g. 2026 - August" required>
+                </div>
+                <div class="form-group">
+                    <label>Billed Amount (₹)</label>
+                    <input type="number" id="billed_input" placeholder="15000" required>
+                </div>
+                <div class="form-group">
+                    <label>Paid Amount (₹)</label>
+                    <input type="number" id="paid_input" placeholder="12000" required>
+                </div>
+                <div class="form-group">
+                    <label>Payment Behavior</label>
+                    <select id="behavior_input">
+                        <option value="Fully Paid">Fully Paid</option>
+                        <option value="Partially Paid" selected>Partially Paid</option>
+                        <option value="Unpaid">Unpaid</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-primary">Save to DB & Predict Risk</button>
+            </form>
+            <div id="status_msg" style="margin-top:10px; font-size:11px;"></div>
+        </div>
+
+        <!-- COLUMN 2: DASHBOARD CHARTS -->
+        <div>
+            <div class="card">
+                <h3>YEARLY REVENUE TREND</h3>
+                <div class="chart-box"><canvas id="yearlyChart"></canvas></div>
+            </div>
+            <div class="card">
+                <h3>PAYMENT BEHAVIOR BREAKDOWN</h3>
+                <div class="chart-box"><canvas id="behaviorChart"></canvas></div>
+            </div>
+        </div>
+
+        <!-- COLUMN 3: PREDICTION & CUSTOMER LEDGER -->
+        <div>
+            <div class="card">
+                <h3>LIVE RISK PREDICTION & LEDGER</h3>
+                <div id="prediction_box">
+                    <p style="color: #64748b; font-size: 11px;">Submit a new customer entry in Column 1 or search below to compute live credit risk.</p>
+                </div>
+                
+                <div style="margin-top: 14px; border-top: 1px solid #334155; padding-top: 10px;">
+                    <label style="margin-bottom: 6px;">Lookup Existing Customer:</label>
+                    <div style="display:flex; gap:6px;">
+                        <input type="text" id="search_cust_id" placeholder="cust 101">
+                        <button type="button" class="btn-primary" style="margin-top:0; width:auto; padding:0 12px;" onclick="searchCustomer()">Search</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        let yearlyChart, behaviorChart;
+
+        async function loadDashboardMetrics() {
+            try {
+                const res = await fetch('/api/dashboard-data');
+                const data = await res.json();
+
+                document.getElementById('kpiBilled').innerText = `₹${data.kpis.total_billed.toLocaleString()}`;
+                document.getElementById('kpiPaid').innerText = `₹${data.kpis.total_paid.toLocaleString()}`;
+                document.getElementById('kpiOutstanding').innerText = `₹${data.kpis.total_outstanding.toLocaleString()}`;
+                document.getElementById('kpiRecovery').innerText = `${data.kpis.recovery_rate}%`;
+                document.getElementById('kpiOrders').innerText = data.kpis.total_orders;
+
+                if (window.Chart) {
+                    if (yearlyChart) yearlyChart.destroy();
+                    yearlyChart = new Chart(document.getElementById('yearlyChart').getContext('2d'), {
+                        type: 'bar',
+                        data: {
+                            labels: data.yearly.labels,
+                            datasets: [
+                                { label: 'Billed (₹)', data: data.yearly.billed, backgroundColor: '#0284c7' },
+                                { label: 'Paid (₹)', data: data.yearly.paid, backgroundColor: '#4ade80' }
+                            ]
+                        },
+                        options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { labels: { color: '#94a3b8', font: { size: 10 } } } } }
+                    });
+
+                    if (behaviorChart) behaviorChart.destroy();
+                    behaviorChart = new Chart(document.getElementById('behaviorChart').getContext('2d'), {
+                        type: 'doughnut',
+                        data: {
+                            labels: data.behavior.labels,
+                            datasets: [{ data: data.behavior.counts, backgroundColor: ['#4ade80', '#facc15', '#f87171'] }]
+                        },
+                        options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { labels: { color: '#94a3b8', font: { size: 10 } } } } }
+                    });
+                }
+            } catch (err) {
+                console.error("Error loading metrics:", err);
+            }
+        }
+
+        document.getElementById('createTxForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const payload = {
+                customer_id: document.getElementById('cust_id_input').value,
+                month_period: document.getElementById('period_input').value,
+                billed_amount: document.getElementById('billed_input').value,
+                paid_amount: document.getElementById('paid_input').value,
+                payment_behavior: document.getElementById('behavior_input').value
+            };
+
+            const response = await fetch('/api/create-customer-transaction', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+            });
+
+            const data = await response.json();
+
+            if (response.ok) {
+                document.getElementById('status_msg').innerHTML = `<span style="color:#4ade80;">✓ ${data.message}</span>`;
+                renderPredictionAndHistory(data);
+                loadDashboardMetrics();
+            } else {
+                document.getElementById('status_msg').innerHTML = `<span style="color:#f87171;">❌ ${data.error}</span>`;
+            }
+        });
+
+        async function searchCustomer() {
+            const custId = document.getElementById('search_cust_id').value.trim();
+            if (!custId) return;
+
+            const res = await fetch(`/api/customer-lookup?customer_id=${encodeURIComponent(custId)}`);
+            const data = await res.json();
+
+            if (res.ok) {
+                renderPredictionAndHistory(data);
+            } else {
+                document.getElementById('prediction_box').innerHTML = `<p style="color: #f87171; font-size:11px;">${data.error}</p>`;
+            }
+        }
+
+        function renderPredictionAndHistory(data) {
+            let badgeClass = data.credit_decision && data.credit_decision.includes('Approved') ? 'approved' : 'rejected';
+            let decisionHtml = data.credit_decision ? `<div class="status-badge ${badgeClass}">${data.credit_decision}</div>` : '';
+
+            let rows = data.history.map(row => {
+                let statusBadge = 'bg-paid';
+                if (row.payment_behavior === 'Partially Paid') statusBadge = 'bg-partial';
+                if (row.payment_behavior === 'Unpaid') statusBadge = 'bg-unpaid';
+
+                return `
+                    <tr>
+                        <td>${row.month_period}</td>
+                        <td>₹${row.billed_amount.toLocaleString()}</td>
+                        <td>₹${row.paid_amount.toLocaleString()}</td>
+                        <td><span class="badge ${statusBadge}">${row.payment_behavior}</span></td>
+                    </tr>
+                `;
+            }).join('');
+
+            document.getElementById('prediction_box').innerHTML = `
+                ${decisionHtml}
+                <div style="font-size:11px; margin-bottom:8px;">
+                    <strong>Customer:</strong> ${data.customer_id}<br>
+                    <strong>Billed:</strong> ₹${data.total_billed.toLocaleString()} | 
+                    <strong>Paid:</strong> ₹${data.total_paid.toLocaleString()}
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Period</th>
+                            <th>Billed</th>
+                            <th>Paid</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>${rows}</tbody>
+                </table>
+            `;
+        }
+
+        window.onload = loadDashboardMetrics;
+    </script>
+</body>
+</html>

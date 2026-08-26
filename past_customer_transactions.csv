@@ -1,0 +1,305 @@
+Customer_ID,Customer_Name,Month_Period,Billed_Amount,Paid_Amount,Outstanding_Balance,Payment_Behavior
+cust 101,A 2,Month 1,15593,0,15593,Unpaid
+cust 101,A 2,Month 2,17861,0,17861,Unpaid
+cust 101,A 2,Month 3,21322,10000,11322,Partially Paid
+cust 101,A 2,Month 4,17844,5000,12844,Partially Paid
+cust 101,A 2,Month 5,14014,0,14014,Unpaid
+cust 101,A 2,Month 6,16919,0,16919,Unpaid
+cust 101,A 2,Month 7,17899,0,17899,Unpaid
+cust 101,A 2,Month 8,22121,0,22121,Unpaid
+cust 101,A 2,Month 9,25759,10000,15759,Partially Paid
+cust 101,A 2,Month 10,16801,0,16801,Unpaid
+cust 101,A 2,Month 11,18673,10000,8673,Partially Paid
+cust 102,A-18,Month 1,3036,0,3036,Unpaid
+cust 102,A-18,Month 2,3825,0,3825,Unpaid
+cust 102,A-18,Month 3,5933,0,5933,Unpaid
+cust 102,A-18,Month 4,60135,5000,55135,Partially Paid
+cust 102,A-18,Month 5,2116,0,2116,Unpaid
+cust 102,A-18,Month 6,2241,0,2241,Unpaid
+cust 102,A-18,Month 7-8,3889,0,3889,Unpaid
+cust 102,A-18,Month 9,4074,0,4074,Unpaid
+cust 102,A-18,Month 10,4152,0,4152,Unpaid
+cust 103,A 22,Month 1,6284,0,6284,Unpaid
+cust 103,A 22,Month 2,7365,0,7365,Unpaid
+cust 103,A 22,Month 3,8987,0,8987,Unpaid
+cust 103,A 22,Month 4,10048,0,10048,Unpaid
+cust 103,A 22,Month 5,11734,0,11734,Unpaid
+cust 103,A 22,Month 6,12454,0,12454,Unpaid
+cust 103,A 22,Month 7,13294,0,13294,Unpaid
+cust 103,A 22,Month 8,14039,7000,7039,Partially Paid
+cust 103,A 22,Month 9,9022,0,9022,Unpaid
+cust 103,A 22,Month 10,9952,0,9952,Unpaid
+cust 103,A 22,Month 11,10939,0,10939,Unpaid
+cust 103,A 22,Month 12,11739,0,11739,Unpaid
+cust 103,A 22,Month 13,12389,0,12389,Unpaid
+cust 103,A 22,Month 14,12773,10000,2773,Partially Paid
+cust 103,A 22,Month 15,30243,0,30243,Unpaid
+cust 103,A 22,Month 16,4084,0,4084,Unpaid
+cust 103,A 22,Month 17,5175,0,5175,Unpaid
+cust 103,A 22,Month 18,6177,0,6177,Unpaid
+cust 103,A 22,Month 19,7105,0,7105,Unpaid
+cust 103,A 22,Month 20,8153,0,8153,Unpaid
+cust 103,A 22,Month 21,10977,0,10977,Unpaid
+cust 103,A 22,Month 22,10431,0,10431,Unpaid
+cust 103,A 22,Month 23,11428,0,11428,Unpaid
+cust 103,A 22,Month 24-25,12361,0,12361,Unpaid
+cust 104,a 24,Month 1,1200,1200,0,Fully Paid
+cust 104,a 24,Month 2,1685,1000,685,Partially Paid
+cust 104,a 24,Month 3,2240,2240,0,Fully Paid
+cust 104,a 24,Month 4,1200,1200,0,Fully Paid
+cust 104,a 24,Month 5,2484,2484,0,Fully Paid
+cust 104,a 24,Month 6,2797,2797,0,Fully Paid
+cust 104,a 24,Month 7,5106,5106,0,Fully Paid
+cust 104,a 24,Month 8,5666,5666,0,Fully Paid
+cust 105,a 34,Month 1,1394,0,1394,Unpaid
+cust 105,a 34,Month 2,2101,2000,101,Partially Paid
+cust 105,a 34,Month 3,1340,1340,0,Fully Paid
+cust 105,a 34,Month 4,1753,0,1753,Unpaid
+cust 105,a 34,Month 5,2402,2402,0,Fully Paid
+cust 106,A 36,Month 1,1291,1000,291,Partially Paid
+cust 106,A 36,Month 2,1150,1100,50,Partially Paid
+cust 106,A 36,Month 3,1214,1214,0,Fully Paid
+cust 106,A 36,Month 4,1450,1450,0,Fully Paid
+cust 106,A 36,Month 5,997,997,0,Fully Paid
+cust 106,A 36,Month 6,723,500,223,Partially Paid
+cust 106,A 36,Month 7,620,620,0,Fully Paid
+cust 106,A 36,Month 8,771,500,271,Partially Paid
+cust 106,A 36,Month 9,1121,500,621,Partially Paid
+cust 106,A 36,Month 10,780,780,0,Fully Paid
+cust 106,A 36,Month 11,939,939,0,Fully Paid
+cust 106,A 36,Month 12,432,0,432,Unpaid
+cust 106,A 36,Month 13,789,0,789,Unpaid
+cust 107,A 20,Month 1,1282,1282,0,Fully Paid
+cust 107,A 20,Month 2,1697,1697,0,Fully Paid
+cust 107,A 20,Month 3,2083,2083,0,Fully Paid
+cust 107,A 20,Month 4,866,866,0,Fully Paid
+cust 107,A 20,Month 5,2493,2493,0,Fully Paid
+cust 107,A 20,Month 6,2081,2081,0,Fully Paid
+cust 108,A 30,Month 1,2051,2051,0,Fully Paid
+cust 108,A 30,Month 2,451,0,451,Unpaid
+cust 108,A 30,Month 3,507,500,7,Partially Paid
+cust 108,A 30,Month 4,1105,600,505,Partially Paid
+cust 108,A 30,Month 5,2361,0,2361,Unpaid
+cust 108,A 30,Month 6,2531,1000,1531,Partially Paid
+cust 108,A 30,Month 7,1561,1561,0,Fully Paid
+cust 108,A 30,Month 8,855,0,855,Unpaid
+cust 109,A39,Month 1,1365,1365,0,Fully Paid
+cust 109,A39,Month 2,941,941,0,Fully Paid
+cust 109,A39,Month 3,858,858,0,Fully Paid
+cust 109,A39,Month 4,419,419,0,Fully Paid
+cust 109,A39,Month 5,1651,1651,0,Fully Paid
+cust 109,A39,Month 6,1135,1135,0,Fully Paid
+cust 109,A39,Month 7,1778,1778,0,Fully Paid
+cust 109,A39,Month 8,1311,1311,0,Fully Paid
+cust 109,A39,Month 9,1989,1989,0,Fully Paid
+cust 109,A39,Month 10,2120,2120,0,Fully Paid
+cust 109,A39,Month 11,2582,2582,0,Fully Paid
+cust 109,A39,Month 12,2376,2376,0,Fully Paid
+cust 109,A39,Month 13,4086,4086,0,Fully Paid
+cust 110,H-10,Month 1,1782,1500,282,Partially Paid
+cust 110,H-10,Month 2,997,500,497,Partially Paid
+cust 110,H-10,Month 3,630,600,30,Partially Paid
+cust 110,H-10,Month 4,1038,700,338,Partially Paid
+cust 110,H-10,Month 5,788,788,0,Fully Paid
+cust 110,H-10,Month 6,625,500,125,Partially Paid
+cust 110,H-10,Month 7,477,0,477,Unpaid
+cust 110,H-10,Month 8,1298,1298,0,Fully Paid
+cust 110,H-10,Month 9,472,472,0,Fully Paid
+cust 111,G11,Month 1,3674,3674,0,Fully Paid
+cust 111,G11,Month 2,3918,3918,0,Fully Paid
+cust 111,G11,Month 3,4294,4294,0,Fully Paid
+cust 111,G11,Month 4,1862,1862,0,Fully Paid
+cust 112,G14,Month 1,960,0,960,Unpaid
+cust 112,G14,Month 2,785,0,785,Unpaid
+cust 112,G14,Month 3,1034,0,1034,Unpaid
+cust 112,G14,Month 4,2369,0,2369,Unpaid
+cust 112,G14,Month 5,3507,3507,0,Fully Paid
+cust 112,G14,Month 6,2094,0,2094,Unpaid
+cust 112,G14,Month 7,2989,2000,989,Partially Paid
+cust 112,G14,Month 8,2349,0,2349,Unpaid
+cust 112,G14,Month 9,2840,2840,0,Fully Paid
+cust 112,G14,Month 10,1887,1887,0,Fully Paid
+cust 112,G14,Month 11,2760,2000,760,Partially Paid
+cust 112,G14,Month 12,2658,0,2658,Unpaid
+cust 112,G14,Month 13,2850,2850,0,Fully Paid
+cust 113,G14D,Month 1,6160,1500,4660,Partially Paid
+cust 113,G14D,Month 2,6582,2000,4582,Partially Paid
+cust 113,G14D,Month 3,5302,0,5302,Unpaid
+cust 113,G14D,Month 4,6576,2500,4076,Partially Paid
+cust 113,G14D,Month 5,5917,1800,4117,Partially Paid
+cust 113,G14D,Month 6,4752,0,4752,Unpaid
+cust 113,G14D,Month 7,7984,2500,5484,Partially Paid
+cust 113,G14D,Month 8,7496,0,7496,Unpaid
+cust 113,G14D,Month 9,9661,0,9661,Unpaid
+cust 113,G14D,Month 10,7000,0,7000,Unpaid
+cust 113,G14D,Month 11,8463,1500,6963,Partially Paid
+cust 113,G14D,Month 12,8551,0,8551,Unpaid
+cust 114,G8,Month 1,8525,8525,0,Fully Paid
+cust 114,G8,Month 2,2522,0,2522,Unpaid
+cust 114,G8,Month 3,6390,500,5890,Partially Paid
+cust 114,G8,Month 4,6285,6285,0,Fully Paid
+cust 114,G8,Month 5,7582,0,7582,Unpaid
+cust 114,G8,Month 6,11634,0,11634,Unpaid
+cust 114,G8,Month 7,13817,13817,0,Fully Paid
+cust 114,G8,Month 8,5269,0,5269,Unpaid
+cust 114,G8,Month 9,9086,0,9086,Unpaid
+cust 114,G8,Month 10,10641,10641,0,Fully Paid
+cust 115,F-13,Month 1,1845,0,1845,Unpaid
+cust 115,F-13,Month 2,2038,0,2038,Unpaid
+cust 115,F-13,Month 3,2589,0,2589,Unpaid
+cust 115,F-13,Month 4,2900,0,2900,Unpaid
+cust 115,F-13,Month 5,3295,0,3295,Unpaid
+cust 115,F-13,Month 6,3746,0,3746,Unpaid
+cust 115,F-13,Month 7,4673,3000,1673,Partially Paid
+cust 115,F-13,Month 8,920,920,0,Fully Paid
+cust 115,F-13,Month 9,407,400,7,Partially Paid
+cust 115,F-13,Month 10,729,729,0,Fully Paid
+cust 115,F-13,Month 11,1626,1626,0,Fully Paid
+cust 116,f-17,Month 1,1665,1665,0,Fully Paid
+cust 116,f-17,Month 2,1432,1432,0,Fully Paid
+cust 116,f-17,Month 3,930,930,0,Fully Paid
+cust 116,f-17,Month 4,1468,1468,0,Fully Paid
+cust 116,f-17,Month 5,2220,2220,0,Fully Paid
+cust 116,f-17,Month 6,743,743,0,Fully Paid
+cust 116,f-17,Month 7,1215,1215,0,Fully Paid
+cust 116,f-17,Month 8,1928,1928,0,Fully Paid
+cust 117,F-10,Month 1,2030,0,2030,Unpaid
+cust 117,F-10,Month 2,1030,330,700,Partially Paid
+cust 117,F-10,Month 3,1284,1000,284,Partially Paid
+cust 117,F-10,Month 4,590,0,590,Unpaid
+cust 117,F-10,Month 5,901,0,901,Unpaid
+cust 117,F-10,Month 6,1000,500,500,Partially Paid
+cust 117,F-10,Month 7,730,0,730,Unpaid
+cust 118,f14,Month 1,4218,2000,2218,Partially Paid
+cust 118,f14,Month 2,4258,2300,1958,Partially Paid
+cust 118,f14,Month 3,2226,0,2226,Unpaid
+cust 118,f14,Month 4,2676,0,2676,Unpaid
+cust 118,f14,Month 5,4988,0,4988,Unpaid
+cust 118,f14,Month 6,5430,0,5430,Unpaid
+cust 118,f14,Month 7,5565,5565,0,Fully Paid
+cust 119,f6,Month 1,3341,2000,1341,Partially Paid
+cust 119,f6,Month 2,2929,0,2929,Unpaid
+cust 119,f6,Month 3,3675,3675,0,Fully Paid
+cust 119,f6,Month 4,1500,1500,0,Fully Paid
+cust 119,f6,Month 5,2802,2802,0,Fully Paid
+cust 119,f6,Month 6,3232,0,3232,Unpaid
+cust 119,f6,Month 7,5938,4000,1938,Partially Paid
+cust 119,f6,Month 8,3640,0,3640,Unpaid
+cust 119,f6,Month 9,5481,5000,481,Partially Paid
+cust 119,f6,Month 10,3375,0,3375,Unpaid
+cust 119,f6,Month 11,3655,0,3655,Unpaid
+cust 119,f6,Month 12,6310,0,6310,Unpaid
+cust 120,f8,Month 1,2534,2534,0,Fully Paid
+cust 120,f8,Month 2,1513,1513,0,Fully Paid
+cust 120,f8,Month 3,2475,2475,0,Fully Paid
+cust 120,f8,Month 4,1145,1145,0,Fully Paid
+cust 120,f8,Month 5,1215,1215,0,Fully Paid
+cust 120,f8,Month 6,2005,2005,0,Fully Paid
+cust 120,f8,Month 7,1853,1853,0,Fully Paid
+cust 120,f8,Month 8,1968,1968,0,Fully Paid
+cust 120,f8,Month 9,1095,1095,0,Fully Paid
+cust 121,D3,Month 1,1394,1394,0,Fully Paid
+cust 121,D3,Month 2,3512,3512,0,Fully Paid
+cust 121,D3,Month 3,3760,3760,0,Fully Paid
+cust 121,D3,Month 4,4716,4716,0,Fully Paid
+cust 121,D3,Month 5,5898,5898,0,Fully Paid
+cust 122,106m,Mid-Month 1,140,140,0,Fully Paid
+cust 122,106m,Mid-Month 2,165,165,0,Fully Paid
+cust 123,405,Weekly 1,1500,1500,0,Fully Paid
+cust 123,405,Weekly 2,1859,1859,0,Fully Paid
+cust 123,405,Weekly 3,2211,2211,0,Fully Paid
+cust 123,405,Weekly 4,1600,615,985,Partially Paid
+cust 124,501m,Months 1-4,1991,1991,0,Paid Late
+cust 124,501m,Months 5-7,1600,1600,0,Paid Late
+cust 124,501m,Month 8,2190,2190,0,Paid Very Late
+cust 125,103 ij,Month 1,1350,1350,0,Fully Paid
+cust 125,103 ij,Month 2,3269,3269,0,Fully Paid
+cust 125,103 ij,Month 3,3384,3500,-116,Overpaid
+cust 125,103 ij,Month 4,1945,1945,0,Fully Paid
+cust 126,402ij,Month 1,3943,3943,0,Fully Paid
+cust 126,402ij,Months 2-3,2500,2500,0,Fully Paid
+cust 126,402ij,Month 4,3118,3118,0,Fully Paid
+cust 126,402ij,Months 5-7,1648,1648,0,Fully Paid
+cust 126,402ij,Months 8-10,835,835,0,Fully Paid
+cust 127,501ij,Weekly 1,300,300,0,Fully Paid
+cust 127,501ij,Weekly 2,984,984,0,Fully Paid
+cust 127,501ij,Month 2,414,414,0,Fully Paid
+cust 128,503ij,Months 1-2,2194,0,2194,Unpaid
+cust 128,503ij,Month 3,3986,3986,0,Fully Paid
+cust 128,503ij,Months 4-6,2258,0,2258,Unpaid
+cust 128,503ij,Month 7,5779,0,5779,Unpaid
+cust 128,503ij,Month 8,5985,0,5985,Unpaid
+cust 128,503ij,Month 9,6519,6519,0,Fully Paid
+cust 128,503ij,Month 10,3078,0,3078,Unpaid
+cust 128,503ij,Month 11,5424,0,5424,Unpaid
+cust 129,504ij,Months 1-3,1500,400,1100,Partially Paid
+cust 129,504ij,Month 4,1874,0,1874,Unpaid
+cust 129,504ij,Month 5,2316,2000,316,Partially Paid
+cust 129,504ij,Month 6,7006,0,7006,Unpaid
+cust 129,504ij,Month 7,1164,500,664,Partially Paid
+cust 129,504ij,Month 8,1280,0,1280,Unpaid
+cust 129,504ij,Month 9,1322,0,1322,Unpaid
+cust 129,504ij,Month 10,2373,2373,0,Fully Paid
+cust 130,601ij,Week 1,240,240,0,Fully Paid
+cust 130,601ij,Week 2,600,600,0,Fully Paid
+cust 130,601ij,Week 3,1040,1040,0,Fully Paid
+cust 130,601ij,Week 4,759,759,0,Fully Paid
+cust 130,601ij,Week 5,522,522,0,Fully Paid
+cust 130,601ij,Week 6,795,795,0,Fully Paid
+cust 130,601ij,Week 7,613,613,0,Fully Paid
+cust 130,601ij,Week 8,419,419,0,Fully Paid
+cust 131,602 ij,Month 1,250,0,250,Unpaid
+cust 131,602 ij,Month 2,100,0,100,Unpaid
+cust 131,602 ij,Month 3,761,0,761,Unpaid
+cust 131,602 ij,Month 4,935,0,935,Unpaid
+cust 131,602 ij,Month 8,1614,1614,0,Paid Very Late
+cust 132,701ij,Month 1,2971,2971,0,Fully Paid
+cust 132,701ij,Month 2,2250,2250,0,Fully Paid
+cust 132,701ij,Month 3,2941,2941,0,Fully Paid
+cust 132,701ij,Month 4,4365,4365,0,Fully Paid
+cust 132,701ij,Month 5,3651,3651,0,Fully Paid
+cust 132,701ij,Month 6,3050,3050,0,Fully Paid
+cust 132,701ij,Month 7,3656,3656,0,Fully Paid
+cust 133,804ij,Month 1,21536,0,21536,Unpaid
+cust 133,804ij,Month 2,27017,0,27017,Unpaid
+cust 133,804ij,Month 3,29024,0,29024,Unpaid
+cust 133,804ij,Month 4,30921,31000,-79,Overpaid
+cust 133,804ij,Month 5,3768,0,3768,Unpaid
+cust 133,804ij,Month 6,9905,0,9905,Unpaid
+cust 133,804ij,Month 7,18384,0,18384,Unpaid
+cust 133,804ij,Month 8,23852,0,23852,Unpaid
+cust 133,804ij,Month 9,27370,0,27370,Unpaid
+cust 133,804ij,Month 10,30453,0,30453,Unpaid
+cust 133,804ij,Month 11,35754,36000,-246,Overpaid
+cust 134,r,Month 1,11922,5000,6922,Partially Paid
+cust 134,r,Month 2,7873,3000,4873,Partially Paid
+cust 134,r,Month 3,5873,0,5873,Unpaid
+cust 134,r,Month 4,6821,0,6821,Unpaid
+cust 134,r,Month 5,8621,3500,5121,Partially Paid
+cust 134,r,Month 6,6590,0,6590,Unpaid
+cust 134,r,Month 7,6995,0,6995,Unpaid
+cust 134,r,Month 8,8790,3000,5790,Partially Paid
+cust 134,r,Month 9,8324,3000,5324,Partially Paid
+cust 134,r,Month 10,7104,1000,6104,Partially Paid
+cust 134,r,Month 11,9011,0,9011,Unpaid
+cust 134,r,Month 12,11774,5000,6774,Partially Paid
+cust 134,r,Month 13,7441,0,7441,Unpaid
+cust 134,r,Month 14,8893,3500,5393,Partially Paid
+cust 135,n,Months 1-2,870,0,870,Paid Late
+cust 135,n,Month 3,1519,1000,519,Partially Paid
+cust 135,n,Months 4-5,1279,1000,279,Partially Paid
+cust 135,n,Months 6-7,895,0,895,Paid Late
+cust 136,b,Weekly 1,490,490,0,Fully Paid
+cust 136,b,Weekly 2,275,275,0,Fully Paid
+cust 136,b,Weekly 3,105,105,0,Fully Paid
+cust 136,b,Weekly 4,750,750,0,Fully Paid
+cust 137,n2,Month 1,1372,771,601,Partially Paid
+cust 137,n2,Month 2,1024,1000,24,Partially Paid
+cust 137,n2,Month 3,1158,700,458,Partially Paid
+cust 138,nk,Month 1,3965,2000,1965,Partially Paid
+cust 138,nk,Month 2,4410,0,4410,Unpaid
+cust 138,nk,Month 3,5470,0,5470,Unpaid
+cust 138,nk,Month 4,3936,1000,2936,Partially Paid
+cust 138,nk,Month 5,4935,0,4935,Unpaid
+cust 138,nk,Month 6,5187,1000,4187,Partially Paid
+cust 138,nk,Month 7,5115,2000,3115,Partially Paid

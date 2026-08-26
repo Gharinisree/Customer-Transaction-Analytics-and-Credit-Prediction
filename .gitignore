@@ -1,0 +1,9 @@
+# Exclude live database containing real transactions
+transactions.db
+
+# Exclude Python cache and virtual environment
+__pycache__/
+*.pyc
+venv/
+.venv/
+.vscode/
